@@ -1,47 +1,135 @@
 @charset "UTF-8";
 
-/***** Breakpoints *****
+/* Importação de fonts (google fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Variáveis */
+:root {
+    --azul: #2277ed;
+    --branco: #fff;
+}
+
+/* CSS Reset (Compatibilizar com todos navegadores)*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Layout */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    /* 1em = 100% (tamanho padrão */
+}
+.container {
+    margin: 0 auto; /* centralizar o bloco */
+}
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-body {
-    background-color: #008B8B;
+/* Cabeçalho */
+header {
+    height: 80px;
+    background-color: #00ffff;
 }
+@media (min-width) {
+    
+}
+#logo img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#check {
+    display: none;
+}
+label {
+    font-size: 3em;
+}
+
+nav ul {
+    height: 100vh; /* 100vh - 50% altura da tela */
+    background-color: var(--azul);
+    list-style: none; /* remover bullets */
+}
+nav ul li {
+    padding: 5px 7px; /* lagura x altura box */
+    border-bottom: 1px solid var(--branco);  
+    text-align: right; 
+}
+
+nav ul li a{
+    color: var(--branco);
+    text-decoration: none; /* remover sublinhado */
+}
+
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
-    body {
-        background-color: #008B8B;
+    /* cabeçalho */
+    #logo img {
+        margin: 10px 0px 0px 0px;
+    }
+    .container{
+        max-width: 540px;
+        background-color: #00ffff;
     }
 }
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
+ /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Table Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 992px) {
-    body {
-        background-color: #008B8B;
+@media (min-width: 768px) {}
+/* cabeçalho */
+.container{
+    max-width: 720px;
+    background-color: #00ffff;
     }
-}
+    header{
+        height: 100px;
+    }
+    #logo img {
+        width: 180px;
+        height: 180px;
+    }
+
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Table Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (mid-width: 992px)
+     /* cabeçalho */
 
 
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 1200px) {
-    body {
-        background-color: #008B8B;
-        color: #ffffff;
+@media (min-width: 1200px) {}
+    .container {
+        max-width: 1140px;
+        background-color: #ff009d;
     }
+    header {
+        height: 150px;
+    }
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Tela FullHD >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1400px)
+.container {
+    max-width: 1360px;
+    background-color: #7d5b8c;
 }
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-
-/* Telas FullHD, 4K e Smart TV>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
+header {
+    height: 200px;
+}
+#logo img {
+    width: 176px;
+    height: 176px;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
