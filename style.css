@@ -8,6 +8,7 @@
 :root {
     --azul: #008080;
     --branco: #ffdfff;
+    --vermelho: #FF0000;
 }
 
 /* CSS Reset (Compatibilizar com todos navegadores)*/
@@ -25,17 +26,31 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    /* centralizar o bloco */
+    margin: 0 auto; /* centralizar o bloco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
+.botao {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #040273;
+    width: 160px;
+    padding: 10px 0px;
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    align-self: center;
+    margin-top: 30px;
+}
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /* Cabeçalho */
 header {
     height: 80px;
-    background-color: #00ffff;
+    /* background-color: #00ffff; */
 }
 
 #logo img {
@@ -88,9 +103,34 @@ nav ul li a {
     text-decoration: none;
     /* remover sublinhado */
 }
+/* Banner */
+main {
+    height: 62vh; /* ajuste da altura do banner */
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1, h2 {
+    color: rgb(0, 255, 255);
+    text-shadow: #000 0.05em 0.05em 0.05em;
+    /*sombra*/
+}
+
+main h1 {
+    font-size: 3em;
+}
+
+main h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
@@ -102,19 +142,19 @@ nav ul li a {
 
     .container {
         max-width: 540px;
-        background-color: #00ffff;
+       /* background-color: #00ffff; */
     }
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Table Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
 /* cabeçalho */
 .container {
     max-width: 720px;
-    background-color: #00ffff;
+   /* background-color: #00ffff; */
 }
 
 header {
@@ -126,21 +166,29 @@ header {
     height: 180px;
 }
 
+nav ul {
+    top: 150px;
+    width: 50%;
+    right: -50%;
+}
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Table Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (mid-width: 992px)
+@media (min-width: 992px) {}
 /* cabeçalho */
 
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
 
 .container {
     max-width: 1140px;
-    background-color: #ffff;
+   /* background-color: #f0c609; */
 }
 
+/* Cabeçalho */
 header {
     height: 150px;
 }
@@ -150,13 +198,38 @@ header {
     height: 128px;
 }
 
+/* Transformação do menu */
+label {
+    display: none;
+}
+
+nav ul {
+    width: 100%;
+    height: auto;
+    position: static;
+    background-color: transparent; /* Revomer a cor do background */
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--azul);
+    }
+    
+    nav ul li a:hover {
+        color: var(--vermelho);
+        }
+}
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Tela FullHD >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
     .container {
         max-width: 1360px;
-        background-color: #7d5b8c;
+      /*  background-color: #7d5b8c; */
     }
 
     header {
