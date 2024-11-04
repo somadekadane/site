@@ -7,7 +7,7 @@
 /* Variáveis */
 :root {
     --azul: #008080;
-    --branco: #ffdfff;
+    --branco: #ffff;
     --vermelho: #FF0000;
 }
 
@@ -34,10 +34,10 @@ body {
 
 .botao {
     text-decoration: none;
-    color: var(--azul);
+    color: var(--branco);
     font-size: 1.3em;
     font-weight: 700;
-    background-color: #040273;
+    background-color: #2a2c47;
     width: 160px;
     padding: 10px 0px;
     border: 2px solid var(--branco);
@@ -116,7 +116,7 @@ main {
 }
 
 main h1, h2 {
-    color: rgb(0, 255, 255);
+    color: #e20c5d;
     text-shadow: #000 0.05em 0.05em 0.05em;
     /*sombra*/
 }
@@ -171,6 +171,15 @@ nav ul {
     width: 50%;
     right: -50%;
 }
+/* Banner */
+main h1 {
+    font-size: 3em;
+}
+
+main h2 {
+    font-size: ;
+}
+
 }
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -222,10 +231,16 @@ nav ul {
     nav ul li a:hover {
         color: var(--vermelho);
         }
+ }
+
+/* Banner */
+main h1 {
+    font-size: 3em;
 }
+
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
-/* Tela FullHD >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Tela FullHD / 4K / >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
     .container {
         max-width: 1360px;
