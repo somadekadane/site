@@ -6,7 +6,7 @@
 
 /* Variáveis */
 :root {
-    --azul: #008080;
+    --azul: rgb(2, 110, 146);
     --branco: #ffff;
     --vermelho: #FF0000;
 }
@@ -37,7 +37,7 @@ body {
     color: var(--branco);
     font-size: 1.3em;
     font-weight: 700;
-    background-color: #2a2c47;
+    background-color: var(--azul);
     width: 160px;
     padding: 10px 0px;
     border: 2px solid var(--branco);
@@ -51,6 +51,11 @@ body {
 header {
     height: 80px;
     /* background-color: #00ffff; */
+}
+header h1 {
+  position: relative;
+  margin: c;
+  
 }
 
 #logo img {
@@ -86,7 +91,7 @@ nav ul {
     /* remover bullets */
     width: 65%;
     position: fixed;
-    top: 200px;
+    top: 80px;
     right: -65%;
     transition: all 0.5s;
 }
@@ -105,7 +110,7 @@ nav ul li a {
 }
 /* Banner */
 main {
-    height: 62vh; /* ajuste da altura do banner */
+    height: 60vh; /* ajuste da altura do banner */
     background: url(img/banner.jpg);
     background-size: cover;
     background-position: center;
@@ -116,7 +121,7 @@ main {
 }
 
 main h1, h2 {
-    color: #e20c5d;
+    color: rgb(168, 86, 2);
     text-shadow: #000 0.05em 0.05em 0.05em;
     /*sombra*/
 }
@@ -162,12 +167,13 @@ header {
 }
 
 #logo img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
+    padding-top: 30px;
 }
 
 nav ul {
-    top: 150px;
+    top: 100px;
     width: 50%;
     right: -50%;
 }
@@ -177,7 +183,7 @@ main h1 {
 }
 
 main h2 {
-    font-size: ;
+    font-size: 3em;
 }
 
 }
