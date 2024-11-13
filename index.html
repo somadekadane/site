@@ -1,40 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas de bolos</title>
-    <meta name="description" content="Tutorial de HTML5 e CSS3 criando um site one page moderno e responsivo">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>   
-       <!-- Cabeçalho -->
-       <header class="container">
-        <!-- Logotipo -->
-         <div id="logo">
-            <img src="img/favicon2.png" alt="logotipo loja de bolos">
-          </div>
-          <!--Titulo-->
-        <h1>Bolo Manuê</h1>
-          <!-- Menu -->
-          <nav>
-            <input type="checkbox" id="check">
-            <label for="check">&#x268c;</label>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Conteúdo</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-          </nav>
-       </header> 
+<html lang="pt-BR">
 
-       <!-- Main -->
-       <main>
-        
-        <h2>Receita de bolos</h2>
-        <a href="#" class="botao">Saiba +</a>
-        </main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas de bolos</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="container">
+    <!-- <div class="container"> -->
+      <!-- Logotipo -->
+      <div id="logo">
+        <img src="img/favicon2.png" alt="logotipo loja de bolos">
+      </div>
+      <!--Titulo-->
+      <h1>Bolo Manuê</h1>
+      <!-- Menu -->
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check">&#x268c;</label>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Conteúdo</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <h2>Receita de bolos</h2>
+    <a href="#" class="botao">Saiba +</a>
+  </main>
+
+  <!-- Seção de destaque -->
+  <section id="destaque">
+    <div class="container">
+      <!--Imagem de destaque-->
+      <div id="ImagemDestaque">
+        <img src="img/fotonovo5.jpg" alt="Pães">
+        <div>
+          <!--Imagem de texto-->
+          <div id="TextoDestaque">
+            <h2>Receita de Bolos</h2>
+            <p>O melhor bolo do mondo!</p>
+          </div>
+          <div class="topicos">
+            <img src="img/bolo2_icon.png" alt="icon do bolo">
+            <p>Bolos</p>
+          </div>
+          <div class="topicos">
+            <img src="img/doce_icon.png" alt="icon de doce">
+            <p>Doces</p>
+          </div>
+          <div class="topicos">
+            <img src="img/pao_icon.png">
+            <p>Pães</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
+
 </html>

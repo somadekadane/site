@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* Importação de fonts (google fonts) */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Variáveis */
@@ -9,6 +8,7 @@
     --azul: rgb(2, 110, 146);
     --branco: #ffff;
     --vermelho: #FF0000;
+    --laranja: #f9a528;
 }
 
 /* CSS Reset (Compatibilizar com todos navegadores)*/
@@ -18,7 +18,8 @@
     border: 0;
 }
 
-/* Layout */
+
+/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
@@ -26,7 +27,8 @@ body {
 }
 
 .container {
-    margin: 0 auto; /* centralizar o bloco */
+    margin: 0 auto;
+    /* centralizar o bloco */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,16 +48,19 @@ body {
     margin-top: 30px;
 }
 
+/* Fim do Layort <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/* Cabeçalho */
+/***** Cabeçalho *****/
 header {
     height: 80px;
-    /* background-color: #00ffff; */
+    background-color: #606c38;
 }
+
 header h1 {
-  position: relative;
-  margin: c;
-  
+    position: relative;
+    margin: c;
 }
 
 #logo img {
@@ -108,9 +113,11 @@ nav ul li a {
     text-decoration: none;
     /* remover sublinhado */
 }
-/* Banner */
+
+/***** Banner *****/
 main {
-    height: 60vh; /* ajuste da altura do banner */
+    height: 60vh;
+    /* ajuste da altura do banner */
     background: url(img/banner.jpg);
     background-size: cover;
     background-position: center;
@@ -120,14 +127,15 @@ main {
     text-align: center;
 }
 
-main h1, h2 {
-    color: rgb(168, 86, 2);
-    text-shadow: #000 0.05em 0.05em 0.05em;
+main h1,
+h2 {
+    color: rgb(2, 110, 146);
+    text-shadow: #000 0.07em 0.07em 0.07em;
     /*sombra*/
 }
 
 main h1 {
-    font-size: 3em;
+    font-size: 5em;
 }
 
 main h2 {
@@ -135,7 +143,9 @@ main h2 {
     margin-top: 30px;
 }
 
+/***** Fim do Samartphone Portrait *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
@@ -147,82 +157,89 @@ main h2 {
 
     .container {
         max-width: 540px;
-       /* background-color: #00ffff; */
+        /* background-color: #00ffff; */
     }
 }
-
+/***** Fim do Samartphone Landscape *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 /* Table Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px) {
 
-/* cabeçalho */
-.container {
-    max-width: 720px;
-   /* background-color: #00ffff; */
+    /* cabeçalho */
+    .container {
+        max-width: 720px;
+        /* background-color: #00ffff; */
+    }
+
+    header {
+        height: 100px;
+    }
+
+    #logo img {
+        width: 150px;
+        height: 150px;
+        padding-top: 30px;
+    }
+
+    nav ul {
+        top: 100px;
+        width: 50%;
+        right: -50%;
+    }
+
+    /* Banner */
+    main h1 {
+        font-size: 3em;
+    }
+
+    main h2 {
+        font-size: 3em;
+    }
 }
 
-header {
-    height: 100px;
-}
-
-#logo img {
-    width: 150px;
-    height: 150px;
-    padding-top: 30px;
-}
-
-nav ul {
-    top: 100px;
-    width: 50%;
-    right: -50%;
-}
-/* Banner */
-main h1 {
-    font-size: 3em;
-}
-
-main h2 {
-    font-size: 3em;
-}
-
-}
+/***** Fim do Samartphone Portrait *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 /* Table Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {}
+
 /* cabeçalho */
 
+/***** Fim do Table Landscape *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
 
-.container {
-    max-width: 1140px;
-   /* background-color: #f0c609; */
-}
+    .container {
+        max-width: 1140px;
+        /*   background-color: rgb(27, 118, 166); */
+    }
 
-/* Cabeçalho */
-header {
-    height: 150px;
-}
+    /* Cabeçalho */
+    header {
+        height: 150px;
+    }
 
-#logo img {
-    width: 128px;
-    height: 128px;
-}
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
 
-/* Transformação do menu */
-label {
-    display: none;
-}
+    /* Transformação do menu */
+    label {
+        display: none;
+    }
 
-nav ul {
-    width: 100%;
-    height: auto;
-    position: static;
-    background-color: transparent; /* Revomer a cor do background */
+    nav ul {
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: transparent;
+        /* Revomer a cor do background */
     }
 
     nav ul li {
@@ -233,24 +250,26 @@ nav ul {
     nav ul li a {
         color: var(--azul);
     }
-    
+
     nav ul li a:hover {
         color: var(--vermelho);
-        }
- }
+    }
+}
 
 /* Banner */
 main h1 {
-    font-size: 3em;
+    font-size: 6em;
 }
 
+/***** Fim do PCs e Norebooks *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 /* Tela FullHD / 4K / >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
     .container {
         max-width: 1360px;
-      /*  background-color: #7d5b8c; */
+        /*  background-color: #7d5b8c; */
     }
 
     header {
@@ -263,4 +282,5 @@ main h1 {
     }
 }
 
+/***** Fim do Tela FullHD | 4K *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
