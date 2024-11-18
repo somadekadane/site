@@ -55,7 +55,7 @@ body {
 /***** Cabeçalho *****/
 header {
     height: 80px;
-    background-color: #606c38;
+    background-color: #d68c45;
 }
 
 header h1 {
@@ -129,7 +129,7 @@ main {
 
 main h1,
 h2 {
-    color: rgb(2, 110, 146);
+    color: var(--azul);
     text-shadow: #000 0.07em 0.07em 0.07em;
     /*sombra*/
 }
@@ -141,6 +141,16 @@ main h1 {
 main h2 {
     font-size: 1.8em;
     margin-top: 30px;
+}
+#ImagemDestaque img{
+    width: 200px;
+    height: 200px;
+}
+
+#destaque {
+    background: url(img/fotonovo8.png);
+    background-size: cover;
+    background-position: center;
 }
 
 /***** Fim do Samartphone Portrait *****/
