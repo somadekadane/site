@@ -55,7 +55,7 @@ body {
 /***** Cabeçalho *****/
 header {
     height: 80px;
-    background-color: #d68c45;
+    background-color: rgb(105, 208, 212)
 }
 
 header h1 {
