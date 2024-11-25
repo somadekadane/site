@@ -5,7 +5,7 @@
 
 /* Variáveis */
 :root {
-    --azul: rgb(2, 110, 146);
+    --azul: rgb(43, 147, 175);
     --branco: #ffff;
     --vermelho: #FF0000;
     --laranja: #f9a528;
@@ -31,7 +31,7 @@ body {
     /* centralizar o bloco */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .botao {
@@ -55,18 +55,21 @@ body {
 /***** Cabeçalho *****/
 header {
     height: 80px;
-    background-color: rgb(105, 208, 212)
+    background-color: rgb(171, 191, 192)
 }
 
 header h1 {
     position: relative;
-    margin: c;
-}
+    font-size: 40px;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+    color: rgb(14, 80, 134);
+  }
 
 #logo img {
     width: 80px;
     height: 80px;
     margin: 10px 0px 0px 10px;
+    align-items: center;
 }
 
 #check {
@@ -84,7 +87,7 @@ label {
     position: fixed;
     top: 30px;
     right: 15px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(29, 28, 28, 0.5);
     /* 0.5 = 50% transparente (0 a 1 (100%) */
 }
 
@@ -118,7 +121,7 @@ nav ul li a {
 main {
     height: 60vh;
     /* ajuste da altura do banner */
-    background: url(img/banner.jpg);
+    background: url(img/fotonovo8.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -146,12 +149,28 @@ main h2 {
     width: 200px;
     height: 200px;
 }
+/***** Destaque ******/
+#destaque .container {
+    flex-direction: column;
+    align-items: center;
+
+}
+    
 
 #destaque {
-    background: url(img/fotonovo8.png);
+    background: url(img/fotonovo20.jpg);
     background-size: cover;
     background-position: center;
+    color: rgba(13, 59, 75);
 }
+.topicos {
+    color: rgb(13, 59, 75);
+    display: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
 
 /***** Fim do Samartphone Portrait *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -162,7 +181,7 @@ main h2 {
 
     /* cabeçalho */
     #logo img {
-        margin: 10px 0px 0px 0px;
+        margin: 10px 0px 10px 0px;
     }
 
     .container {
