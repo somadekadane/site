@@ -9,6 +9,23 @@
     --branco: #ffff;
     --vermelho: #FF0000;
     --laranja: #f9a528;
+    --preto: #0000;
+    --azul: #0000ff;
+    --ciano: #00ffff;
+    --verde: #008000;
+    --chocolate: #D2691E;
+    --saddleBrown: #8B4513;
+    --Indigo: #4B0082;
+    --darkMagenta: #8B008B;
+    --deepPink: #FF1493;
+    --lightCoral: #F08080;
+    --maroon: #800000;
+    --red: #FF0000;
+    --orangeRed: #FF4500;
+    --orange: #FFA500;
+    --gold: #FFD700;
+    --yellow: #FFFF00;
+
 }
 
 /* CSS Reset (Compatibilizar com todos navegadores)*/
@@ -41,7 +58,7 @@ body {
     font-weight: 700;
     background-color: var(--azul);
     width: 160px;
-    padding: 10px 0px;
+    padding: 10px 20px;
     border: 2px solid var(--branco);
     border-radius: 25px;
     align-self: center;
@@ -146,8 +163,9 @@ main h2 {
     margin-top: 30px;
 }
 #ImagemDestaque img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    border-radius: 90%;
 }
 /***** Destaque ******/
 #destaque .container {
@@ -169,7 +187,9 @@ main h2 {
     flex-direction: row;
     justify-content: center;
 }
+#imagemDestaque img {
 
+}
 
 
 /***** Fim do Samartphone Portrait *****/
@@ -283,6 +303,15 @@ main h2 {
     nav ul li a:hover {
         color: var(--vermelho);
     }
+    #destaque .container {
+        flex-direction: row;
+        align-self: center;
+        width: fit-content;
+    }
+    #ImagemDestaque {
+        margin: 10px 50px 50px 10px;
+    }
+
 }
 
 /* Banner */
@@ -308,6 +337,10 @@ main h1 {
     #logo img {
         width: 176px;
         height: 176px;
+    }
+    #destaque .container {
+        flex-direction: row;
+        align-self: center;
     }
 }
 
