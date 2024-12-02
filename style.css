@@ -10,7 +10,6 @@
     --vermelho: #FF0000;
     --laranja: #f9a528;
     --preto: #0000;
-    --azul: #0000ff;
     --ciano: #00ffff;
     --verde: #008000;
     --chocolate: #D2691E;
@@ -24,7 +23,6 @@
     --orangeRed: #FF4500;
     --orange: #FFA500;
     --gold: #FFD700;
-    --yellow: #FFFF00;
 
 }
 
@@ -48,7 +46,7 @@ body {
     /* centralizar o bloco */
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .botao {
@@ -63,6 +61,35 @@ body {
     border-radius: 25px;
     align-self: center;
     margin-top: 30px;
+}
+
+.card {
+    width: 338px;
+    height: 520px;
+    background-color: var(--cinza);
+    border: 1px solid var(--azul);
+    margin-top: 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 0;
+    background-color: var(--azulMedio);
 }
 
 /* Fim do Layort <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -80,7 +107,7 @@ header h1 {
     font-size: 40px;
     text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
     color: rgb(14, 80, 134);
-  }
+}
 
 #logo img {
     width: 80px;
@@ -155,25 +182,26 @@ h2 {
 }
 
 main h1 {
-    font-size: 5em;
+    color: var(--laranja) font-size: 5em;
 }
 
 main h2 {
     font-size: 1.8em;
     margin-top: 30px;
 }
-#ImagemDestaque img{
+
+#ImagemDestaque img {
     width: 150px;
     height: 150px;
     border-radius: 90%;
 }
+
 /***** Destaque ******/
 #destaque .container {
     flex-direction: column;
     align-items: center;
 
 }
-    
 
 #destaque {
     background: url(img/fotonovo20.jpg);
@@ -181,16 +209,51 @@ main h2 {
     background-position: center;
     color: rgba(13, 59, 75);
 }
+
 .topicos {
     color: rgb(13, 59, 75);
     display: center;
     flex-direction: row;
     justify-content: center;
 }
-#imagemDestaque img {
 
+#imagemDestaque img {
+    margin-bottom: 15px;
 }
 
+#imagemFaixa img {
+    width: 180px;
+    height: 180px;
+}
+
+/*** Seçaõ de conteúdo (cards) **/
+#conteudo {
+    padding: 50px 0px;
+}
+
+#conteudo .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteudo h2 {
+    color: var(--azul);
+    margin-bottom: 25px;
+}
+
+#todos {
+    color: var(--azul);
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /***** Fim do Samartphone Portrait *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -209,6 +272,7 @@ main h2 {
         /* background-color: #00ffff; */
     }
 }
+
 /***** Fim do Samartphone Landscape *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -303,11 +367,13 @@ main h2 {
     nav ul li a:hover {
         color: var(--vermelho);
     }
+
     #destaque .container {
         flex-direction: row;
         align-self: center;
         width: fit-content;
     }
+
     #ImagemDestaque {
         margin: 10px 50px 50px 10px;
     }
@@ -338,6 +404,7 @@ main h1 {
         width: 176px;
         height: 176px;
     }
+
     #destaque .container {
         flex-direction: row;
         align-self: center;
