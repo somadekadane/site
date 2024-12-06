@@ -1,29 +1,25 @@
 @charset "UTF-8";
 
 /* Importação de fonts (google fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Variáveis */
 :root {
+    --background: var(--azul);
     --azul: rgb(43, 147, 175);
-    --branco: #ffff;
-    --vermelho: #FF0000;
-    --laranja: #f9a528;
-    --preto: #0000;
-    --ciano: #00ffff;
-    --verde: #008000;
-    --chocolate: #D2691E;
-    --saddleBrown: #8B4513;
-    --Indigo: #4B0082;
-    --darkMagenta: #8B008B;
-    --deepPink: #FF1493;
-    --lightCoral: #F08080;
-    --maroon: #800000;
-    --red: #FF0000;
-    --orangeRed: #FF4500;
-    --orange: #FFA500;
-    --gold: #FFD700;
-
+    --branco: #fff;
+    --amarelo: #e5b567;
+    --azul: #9cdcfe;
+    --azulMedio: #3b468c;
+    --azulEscuro: #05152b;
+    --cinzaClaro: #d6d6d6;
+    --cinza: #858585;
+    --laranja: #e87d3e;
+    --pink: #b05279;
+    --roxo: #9e86c8;
+    --verde: #b4d273;
+    --vermelho: #ff0000;
+    --ciano: #64B7CC;
 }
 
 /* CSS Reset (Compatibilizar com todos navegadores)*/
@@ -36,17 +32,22 @@
 
 /* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lobster Two", serif;
     font-size: 1em;
     /* 1em = 100% (tamanho padrão */
+    background-color: var(--background);
 }
 
+.flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
 .container {
     margin: 0 auto;
     /* centralizar o bloco */
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .botao {
@@ -54,15 +55,15 @@ body {
     color: var(--branco);
     font-size: 1.3em;
     font-weight: 700;
-    background-color: var(--azul);
+    background-color: var(--azulMedio);
     width: 160px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: 2px solid var(--branco);
     border-radius: 25px;
     align-self: center;
     margin-top: 30px;
 }
-
+/* Layout para 3 cartões */
 .card {
     width: 338px;
     height: 520px;
@@ -90,6 +91,7 @@ body {
     padding: 10px 100px;
     border: 0;
     background-color: var(--azulMedio);
+    color: var(--branco)
 }
 
 /* Fim do Layort <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -98,8 +100,9 @@ body {
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /***** Cabeçalho *****/
 header {
-    height: 80px;
-    background-color: rgb(171, 191, 192)
+    height: 70px;
+    /* height: 65px; */
+    /* background-color: rgb(171, 191, 192) */
 }
 
 header h1 {
@@ -110,8 +113,8 @@ header h1 {
 }
 
 #logo img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 10px 0px 0px 10px;
     align-items: center;
 }
@@ -131,19 +134,19 @@ label {
     position: fixed;
     top: 30px;
     right: 15px;
-    color: rgba(29, 28, 28, 0.5);
     /* 0.5 = 50% transparente (0 a 1 (100%) */
+    color: rgba(29, 28, 28, 0.5);    
 }
 
 nav ul {
+    list-style: none;
+    background-color: rgba(43, 147, 175, 0.726);
+    /* remover bullets */
     height: 100vh;
     /* 100vh - 50% altura da tela */
-    background-color: var(--azul);
-    list-style: none;
-    /* remover bullets */
     width: 65%;
     position: fixed;
-    top: 80px;
+    top: 70px;
     right: -65%;
     transition: all 0.5s;
 }
@@ -151,14 +154,14 @@ nav ul {
 nav ul li {
     padding: 5px 7px;
     /* lagura x altura box */
-    border-bottom: 1px solid var(--branco);
+    border-bottom: 1px solid var(--cinza);
     text-align: right;
 }
 
 nav ul li a {
-    color: var(--branco);
-    text-decoration: none;
+    color: var(--black);
     /* remover sublinhado */
+    text-decoration: none;    
 }
 
 /***** Banner *****/
@@ -177,48 +180,121 @@ main {
 main h1,
 h2 {
     color: var(--azul);
+     /* efeito de sombra nos textos */
     text-shadow: #000 0.07em 0.07em 0.07em;
-    /*sombra*/
-}
+    }
 
 main h1 {
-    color: var(--laranja) font-size: 5em;
+    color: var(--ciano);
+    font-size: 5em;
 }
 
 main h2 {
+    color: var(--branco);
     font-size: 1.8em;
     margin-top: 30px;
+    font-weight: 800;
+}
+#rodape {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azulEscuro);
+    padding-top: 40px;
+}
+#rodape .container {
+    flex-direction: row;
+}
+#rodape .container h3 {
+    color: #fff;
+    font-size: 1em;
+
 }
 
-#ImagemDestaque img {
-    width: 150px;
-    height: 150px;
-    border-radius: 90%;
-}
 
 /***** Destaque ******/
+
+#destaque {
+    background: url(img/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    /* espaçamento interno para não encostar na borda da tela do dispositivo */
+    padding: 50px 15px;
+    background-attachment: fixed;
+}
+
 #destaque .container {
     flex-direction: column;
     align-items: center;
-
 }
 
-#destaque {
-    background: url(img/fotonovo20.jpg);
-    background-size: cover;
-    background-position: center;
-    color: rgba(13, 59, 75);
+#ImagemDestaque img {
+    width: 200px;
+    height: 200px;
+    /* arredondar uma imagem quadrada */
+    border-radius: 70%;
+    margin-right: 50px;
+}
+ 
+#textoDestaque {
+    color: var(--branco);
+}
+
+#textoDestaque h2 {
+    margin-bottom: 20px;
+}
+
+/* Atenção !!! Detalhe do sinal ">" ref. ao elemento imediato */
+#textoDestaque>p {
+    margin-bottom: 15px;
 }
 
 .topicos {
-    color: rgb(13, 59, 75);
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+
+    /* color: rgb(13, 59, 75);
     display: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; */
 }
 
-#imagemDestaque img {
-    margin-bottom: 15px;
+.topicos img {
+    margin-right: 10px;
+}
+
+.topicos p {
+    font-weight: 600;
+ }
+
+ /****** Sobre ******/ 
+/* O estilo abaixo será aplicado apenas ao container que está subordinado a section "sobre" */
+#Sobre {
+    padding: 40px 15px;
+}
+
+#Sobre .container {
+    flex-direction: column;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    margin-top: 20px;
+}
+
+/****** Faixa de destaque ******/
+#faixaDestaque {
+    background: url(img/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 15px;
+    background-attachment: fixed;
+}
+
+#faixaDestaque .container {
+    flex-direction: column;
+    justify-content: center;
 }
 
 #imagemFaixa img {
@@ -226,7 +302,18 @@ main h2 {
     height: 180px;
 }
 
-/*** Seçaõ de conteúdo (cards) **/
+#textoFaixa h2 {
+    color: var(--branco);
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+#textoFaixa p {
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+
+/*** Seção de conteúdo (cards) **/
 #conteudo {
     padding: 50px 0px;
 }
@@ -255,6 +342,45 @@ main h2 {
     justify-content: center;
 }
 
+/** Rodape **/
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/background4.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #05152b;
+}
+address a {
+    text-decoration: none;
+    color: #05152b;
+}
+address img {
+    padding-top: 15px;
+}
+
+#iconLocal {
+    display: none;
+}
+#dados {
+    margin: 30px 0px 15px 0 px;
+}
+
+#googleMaps {
+    display: none;
+}
+
+footer {
+    padding: 50px;
+    background-color: #287192;
+    color: #fff;
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+
+
 /***** Fim do Samartphone Portrait *****/
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -262,54 +388,106 @@ main h2 {
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
 
-    /* cabeçalho */
-    #logo img {
-        margin: 10px 0px 10px 0px;
-    }
-
+    /*** Layout ***/
     .container {
         max-width: 540px;
         /* background-color: #00ffff; */
     }
+
+        /****** Cabeçalho ******/
+    nav ul {
+        right: -25%;
+        width: 25%;
+    }
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    /****** destaque ******/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 256px;
+        height: 256px;
+    }   
+         
 }
 
 /***** Fim do Samartphone Landscape *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
 /* Table Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px) {
 
-    /* cabeçalho */
+    /*** Layout ***/
     .container {
         max-width: 720px;
         /* background-color: #00ffff; */
     }
 
-    header {
-        height: 100px;
+    /****** Banner ******/
+    main {
+        height: 80vh;
     }
 
-    #logo img {
+    main h1 {
+        font-size: 4em;
+    }
+    /****** Destaque ******/
+    #imagemDestaque img {
+        width: 440px;
+        height: 440px;
+    }
+    #Destaque {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /** Sobre **/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        
+    }
+
+     /****** Seção de conteúdo - cards ******/
+     .card {
+        margin: 25px 10px 0px 10px;
+    }
+
+
+    /** header {
+        height: 100px;
+    } */
+
+   /** #logo img {
         width: 150px;
         height: 150px;
         padding-top: 30px;
-    }
+    } **/
 
-    nav ul {
+   /** nav ul {
         top: 100px;
         width: 50%;
         right: -50%;
-    }
+    } **/
 
     /* Banner */
-    main h1 {
+  /**  main h2 {
         font-size: 3em;
-    }
-
-    main h2 {
-        font-size: 3em;
-    }
+    } **/
 }
 
 /***** Fim do Samartphone Portrait *****/
@@ -317,12 +495,21 @@ main h2 {
 
 
 /* Table Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    /****** Layout ******/
+    .container {
+        max-width: 960px;
+        /* background-color: #ffa500; */
+    }
 
-/* cabeçalho */
+    /****** Banner ******/
+    main {
+        height: 70vh;
+    }
+}
 
 /***** Fim do Table Landscape *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
@@ -334,12 +521,12 @@ main h2 {
 
     /* Cabeçalho */
     header {
-        height: 150px;
+        height: 100px;
     }
 
     #logo img {
-        width: 128px;
-        height: 128px;
+        width: 180px;
+        height: 180px;
     }
 
     /* Transformação do menu */
@@ -348,6 +535,7 @@ main h2 {
     }
 
     nav ul {
+        margin-top: 25px;
         width: 100%;
         height: auto;
         position: static;
@@ -361,55 +549,109 @@ main h2 {
     }
 
     nav ul li a {
-        color: var(--azul);
+        color: var(--black);
     }
 
     nav ul li a:hover {
         color: var(--vermelho);
     }
 
+    /* Banner */
+    main h1 {
+        font-size: 6em;
+    }
+
+    main h2 {
+        font-size: 3em;
+     }
+
+    /****** Destaque ******/
+    #destaque {
+        /* O código abaixo fixa o banner (efeito parallax) */
+        background-attachment: fixed;
+    }
+
     #destaque .container {
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    
+    /******* Sobre ******/
+    #Sobre .container {
+        flex-direction: row;
+        align-items: center;
+    }
+     
+    #video iframe {
+        margin: 0;
+    }
+
+    /***** Faixa de destaque ******/
+    #faixaDestaque {
+        background-attachment: fixed;
+    }
+
+    #faixaDestaque .container {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imagemFaixa img {
+        width: 400px;
+        height: 400px;
+    }  
+
+    /** #destaque .container {
         flex-direction: row;
         align-self: center;
         width: fit-content;
-    }
+    } **/
 
-    #ImagemDestaque {
+    /**  #ImagemDestaque {
         margin: 10px 50px 50px 10px;
-    }
+    } **/
 
-}
-
-/* Banner */
-main h1 {
-    font-size: 6em;
 }
 
 /***** Fim do PCs e Norebooks *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
 /* Tela FullHD / 4K / >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
+
+    /****** Layout ******/
     .container {
         max-width: 1360px;
         /*  background-color: #7d5b8c; */
     }
 
-    header {
-        height: 200px;
+    /****** Banner ******/
+    main {
+        height: 100vh;
     }
 
-    #logo img {
+    main h1 {
+        font-size: 6.5em;
+    }
+
+    main h2 {
+        font-size: 4em;
+    }
+
+    /** header {
+        height: 200px;
+    } **/
+
+    /** #logo img {
         width: 176px;
         height: 176px;
-    }
+    } **/
 
-    #destaque .container {
+    /** #destaque .container {
         flex-direction: row;
         align-self: center;
-    }
-}
+    } **/
 
-/***** Fim do Tela FullHD | 4K *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    /* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>> */
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Receitas de bolos</title>
+  <title>Bolo Manuê - Receitas de bolos</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
@@ -12,32 +12,28 @@
 
 <body>
   <!-- Cabeçalho -->
-  <header>
+  <header class="container">
     <!-- <div class="container"> -->
-    <div class="container">
-      <div id="logo">
-        <img src="img/favicon2.png" alt="logotipo loja de bolos">
-      </div>
-      <!--Titulo-->
-      <h1>Bolo Manuê</h1>
-      <!-- Menu -->
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check">&#x268c;</label>
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Conteúdo</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
+    <div id="logo">
+      <img src="img/favicon2.png" alt="logotipo loja de bolos">
     </div>
+    <!-- Menu -->
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check">&#x268c;</label>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Conteúdo</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main -->
   <main>
-
-    <h2>Receita de bolos</h2>
+    <h1>Receita de bolos</h1>
+    <h2>Bolo Manuê</h2>
     <a href="#" class="botao">Saiba +</a>
   </main>
 
@@ -55,7 +51,7 @@
           <p><b>O melhor bolo do mundo!</b></p>
         </div>
         <div class="topicos">
-          <img src="img/bolo2_icon.png" alt="icon do bolo">
+          <img src="img/bolo_icon.png" alt="icon do bolo">
           <p><b>Bolos</b></p>
         </div>
         <div class="topicos">
@@ -69,18 +65,38 @@
       </div>
     </div>
   </section>
-  <!-- Faixa de destaque -->
+
+  <!-- Sobre -->
+  <section id="Sobre">
+
+    <div class="container">
+
+      <div id="institucional">
+        <h2>Bolo Manuê</h2>
+        <p>As melhores receitas de bolos, fácil e simples de fazer.</p>
+      </div>
+
+      <div id="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AhEdEFghvl0?si=sp_rsgZEEjJdIgED"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+    </div>
+    
+  </section>
+
+  <!-- Faixa de destaque 1 - Rede social -->
   <section id="faixaDestaque">
     <div class="container">
       <div id="imagemFaixa">
-        <img src="img/whatsapp.jpg" alt="Whatsapp">
-        <div>
-          <div id="textoFaixa">
-            <h2>UM CLIQUE!</h2>
-            <p>Para saborar o melhor bolo do mundo.</p>
-            <a href="http://" target="_blank" class="botao">Increver-se</a>
-          </div>
-        </div>
+        <img src="img/instagram20-icon.png" alt="Instagram">
+      </div>
+      <div id="textoFaixa">
+        <h2>Um Clique!</h2>
+        <p>Para degustar o melhor bolo do mundo.</p>
+        <a href="https://www.instagram.com/" target="_blank" class="botao">Inscrever-se</a>
       </div>
     </div>
   </section>
@@ -91,18 +107,16 @@
       <h2>conteúdo</h2>
 
       <div class="containerCards">
-
         <div class="card">
-          <img src="img/bolo2_icon.png" alt="bolos">
+          <img src="img/bolo3030.png" alt="bolos">
           <h3>Bolos</h3>
-          <p>Bolo feito com carinho
-            <br>
-          </p>
+          <p>Bolo feito com carinho</p>
+          <br> <!-- Quebra de linha -->
           <a href="#" class="botao">Saiba +</a>
         </div>
 
         <div class="card">
-          <img src="img/doce_icon.png" alt="doces">
+          <img src="img/doce4040.png" alt="doces">
           <h3>Doces</h3>
           <p>Doce com sabor afetivo</p>
           <br>
@@ -110,21 +124,65 @@
         </div>
 
         <div class="card">
-          <img src="img/pao_icon.png" alt="Paes">
+          <img src="img/pao2020.png" alt="Paes">
           <h3>Pães</h3>
-          <p>O melhor pão que já comi!</p>
+          <p>O melhor pão que eu já comi!</p>
           <br>
           <a href="#" class="botao">Saiba +</a>
         </div>
 
       </div>
-
       <a href="#" id="todos">Conheça todos</a>
+    </div>
+  </section>
+  <!-- Rodapé -->
+  <address>
+    <div class="container">
+      <div id="contato">
+        <a href="https://api.whatsapp.com/send?phone=5511012345678" target="_blank">
+          <img src="img/whatsapp64_icon.png" alt="whatsapp" title="Abrir no whatsapp">
+          <p>(11) 01234-5678</p>
+        </a>
+        <img src="img/" alt="">
+      </div>
+      <div id="endereco">
+        <a href="https://maps.app.goo.gl/9t4G69Dne3zRjWZ5A"><img src="img/mapaicon.png" alt="Mapa" id="iconeMapa"></a>
+        <img src="img/local.png" alt="local" id="iconeLocal">
+        <p>Rua Fulano de Tal, 1234</p>
+        <p>Todos Nós</p>
+        <p>Barueri - SP</p>
+        <a href="mailto:seuemail@email.com?subject=Dúvidas">
+          <img src="img/email_web2_icon.png" alt="email" title="Enviar E-mail">
+          <p>seuemail@email.com</p>
+        </a>
+        <p id="dados">&#128064; Endereço e dados de contato fictícios</p>
+
+      </div>
+      <div id="googleMaps"></div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323.33286139494186!2d-46.88712115029442!3d-23.52913057044315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01cba6d0983f%3A0x18bcfa37ad4c540c!2sE.E.%20Profa%20Alayde%20Domingues%20Couto%20Macedo!5e0!3m2!1spt-BR!2sbr!4v1733492732591!5m2!1spt-BR!2sbr"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </address>
+
+  <footer>
+    <div class="container flex5">
+      <div id="copyright">
+        <p>&#169; Eder Silva </p>
+      </div>
+      <div id="social">
+        <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube48_icon.png" alt="youtube"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram48_icon.png" alt="instagram"></a>
+
+        <a href="https://wa.me/whatsappphonenumber/?text=urlencodedtex" target="_blank"><img
+            src="img/whatsapp48_icon.png" alt="whatsapp"></a>
+      </div>
 
     </div>
 
-  </section>
-
+  </footer>
+  <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
 </body>
 
 </html>
