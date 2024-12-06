@@ -42,6 +42,12 @@ body {
     display: flex;
     flex-direction: column-reverse;
 }
+
+.flex6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
 .container {
     margin: 0 auto;
     /* centralizar o bloco */
@@ -210,8 +216,7 @@ main h2 {
 
 }
 
-
-/***** Destaque ******/
+/********** Destaque **********/
 
 #destaque {
     background: url(img/background2.jpg);
@@ -342,7 +347,7 @@ main h2 {
     justify-content: center;
 }
 
-/** Rodape **/
+/********** Rodape **********/
 address {
     padding: 35px 10px 50px 10px;
     background: url(img/background4.jpg);
@@ -371,7 +376,7 @@ address img {
 
 footer {
     padding: 50px;
-    background-color: #287192;
+    background-color: #226280;
     color: #fff;
     text-align: center;
 }
@@ -380,9 +385,7 @@ footer {
     margin-bottom: 25px;
 }
 
-
 /***** Fim do Samartphone Portrait *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -421,7 +424,17 @@ footer {
         width: 256px;
         height: 256px;
     }   
-         
+      
+    /***** Rodapé *****/
+    .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #social {
+        margin: 0;
+    }
 }
 
 /***** Fim do Samartphone Landscape *****/
@@ -455,11 +468,10 @@ footer {
         justify-content: center;
     }
 
-    /** Sobre **/
+    /***** Sobre ******/
     #video iframe {
         width: 560px;
-        height: 315px;
-        
+        height: 315px;        
     }
 
      /****** Seção de conteúdo - cards ******/
@@ -491,7 +503,6 @@ footer {
 }
 
 /***** Fim do Samartphone Portrait *****/
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 
 /* Table Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -637,6 +648,22 @@ footer {
 
     main h2 {
         font-size: 4em;
+    }
+    /***** Rodapé *****/
+    #iconeLocal {
+        display: inline;
+    }
+
+    #iconeMapa {
+        display: none;
+    }
+
+    #googleMaps {
+        display: inline;
+    }
+
+    .flex6 {
+        flex-direction: row-reverse;
     }
 
     /** header {
