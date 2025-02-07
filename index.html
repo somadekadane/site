@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  
   <!-- Cabeçalho -->
   <header class="container">
     <!-- <div class="container"> -->
@@ -42,7 +43,10 @@
     <div class="container">
       <!--Imagem de destaque-->
       <div id="ImagemDestaque">
-        <img src="img/fotonovo10.jpeg" alt="Pães">
+        <div id="carrosel">
+          <img src="img/fotonovo10.jpeg" alt="Pães">
+                    
+        </div>
       </div>
       <div>
         <!--Imagem de texto-->
@@ -78,13 +82,13 @@
 
       <div id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/AhEdEFghvl0?si=sp_rsgZEEjJdIgED"
-          title="YouTube video player" frameborder="0"
+          title="YouTube video player" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
 
     </div>
-    
+
   </section>
 
   <!-- Faixa de destaque 1 - Rede social -->
@@ -96,7 +100,7 @@
       <div id="textoFaixa">
         <h2>Um Clique!</h2>
         <p>Para degustar o melhor bolo do mundo.</p>
-        <a href="https://www.instagram.com/" target="_blank" class="botao">Inscrever-se</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="botao">Inscrever-se</a>
       </div>
     </div>
   </section>
@@ -134,6 +138,7 @@
       </div>
       <a href="#" id="todos">Conheça todos</a>
     </div>
+    
   </section>
   <!-- Rodapé -->
   <address>
@@ -169,20 +174,22 @@
   <footer>
     <div class="container flex5">
       <div id="copyright">
-        <p>&#169; Eder Silva </p>
+        <p>&#169;<span id="copyrightYear"></span>
+          - Receita de Bolos
+        </p>
       </div>
       <div id="social">
-        <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube48_icon.png" alt="youtube"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="img/youtube48_icon.png" alt="youtube"></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram48_icon.png" alt="instagram"></a>
-
         <a href="https://wa.me/whatsappphonenumber/?text=urlencodedtex" target="_blank"><img
-            src="img/whatsapp48_icon.png" alt="whatsapp"></a>
+          src="img/whatsapp48_icon.png" alt="whatsapp"></a>
       </div>
 
     </div>
 
   </footer>
   <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
+  <script src="script.js"></script>
 </body>
 
 </html>
